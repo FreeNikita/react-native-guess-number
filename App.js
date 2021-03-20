@@ -3,12 +3,12 @@ import { StyleSheet, View } from 'react-native';
 import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
-import { Header } from './src/components/Header';
 import {
   StartGameScreen,
   GameScreen,
   GameOverScreen
 } from './src/screens';
+import { Header } from "./src/components/header";
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -63,7 +63,7 @@ export default function App() {
 
   return (
     <View style={styles.screen}>
-      <Header title="Guess a Number" />
+      <Header />
       {content}
     </View>
   );
