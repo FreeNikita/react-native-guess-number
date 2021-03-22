@@ -1,14 +1,24 @@
-import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {View, Text, Image, ScrollView, Dimensions} from 'react-native';
 
 import {
     BodyText,
     TitleText,
     MainButton
 } from '../../components/common'
-import { styles } from './styles'
+import {styles as style}from './styles'
 
 export const GameOverScreen = props => {
+    const [dimensions, setDimensions] = useState(Dimensions.get('window'))
+    const styles = style(dimensions)
+
+    useEffect(() => {
+        const updateLayout = () => setDimensions(Dimensions.get('window'))
+
+        Dimensions.addEventListener('change', updateLayout)
+        return () => Dimensions.addEventListener('change', updateLayout)
+    })
+
     return (
         <ScrollView>
             <View style={styles.screen}>

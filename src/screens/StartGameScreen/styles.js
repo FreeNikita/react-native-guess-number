@@ -1,6 +1,6 @@
-import { Dimensions, StyleSheet} from "react-native";
+import { StyleSheet} from "react-native";
 
-export const styles = StyleSheet.create({
+export const styles = (dimensions) => StyleSheet.create({
     screen: {
         flex: 1,
         padding: 10,
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     },
     button: {
         // width: 100
-        width: Dimensions.get('window').width / 4
+        width: dimensions.width / 4
     },
     input: {
         width: 50,
