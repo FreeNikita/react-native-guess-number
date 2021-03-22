@@ -4,8 +4,7 @@ import {THEME} from "../../constants/theme";
 export const styles = StyleSheet.create({
     headerBase: {
         width: '100%',
-        height: 90,
-        paddingTop: 36,
+        height: 50,
         alignItems: 'center',
         justifyContent: 'center'
     },
