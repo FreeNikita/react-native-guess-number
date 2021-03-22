@@ -6,7 +6,8 @@ import {
     Keyboard,
     Alert,
     ScrollView,
-    KeyboardAvoidingView, Dimensions
+    KeyboardAvoidingView,
+    Dimensions,
 } from 'react-native';
 
 import {
@@ -15,7 +16,7 @@ import {
     NumberContainer,
     BodyText,
     TitleText,
-    MainButton,
+    MainButtonAndroid,
 } from '../../components/common'
 import { THEME } from '../../constants/theme';
 import { styles as style } from './styles'
@@ -65,9 +66,9 @@ export const StartGameScreen = props => {
             <Card style={styles.summaryContainer}>
                 <BodyText>You selected</BodyText>
                 <NumberContainer>{selectedNumber}</NumberContainer>
-                <MainButton onPress={() => props.onStartGame(selectedNumber)}>
+                <MainButtonAndroid onPress={() => props.onStartGame(selectedNumber)}>
                     START GAME
-                </MainButton>
+                </MainButtonAndroid>
             </Card>
         );
     }

@@ -1,6 +1,6 @@
 export {BodyText} from './BodyText'
 export {Card}from './Card'
-export {MainButton} from './MainButton'
+export {MainButtonAndroid} from './MainButton'
 export {NumberContainer} from './NumberContainer'
 export {TitleText} from './TitleText'
 export {Input} from './Input'

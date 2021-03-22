@@ -1,17 +1,26 @@
-import {StyleSheet} from "react-native";
+import {StyleSheet, Platform} from "react-native";
 import {THEME} from "../../constants/theme";
 
 export const styles = StyleSheet.create({
-    header: {
+    headerBase: {
         width: '100%',
         height: 90,
         paddingTop: 36,
-        backgroundColor: THEME.COLOR.PRIMARY,
         alignItems: 'center',
         justifyContent: 'center'
     },
+    headerIOS: {
+        backgroundColor: 'white',
+        borderBottomColor: "#ccc",
+        borderBottomWidth: 1,
+    },
+    headerAndroid: {
+        backgroundColor: THEME.COLOR.PRIMARY,
+        borderBottomColor: "transparent",
+        borderBottomWidth: 0,
+    },
     title: {
-        color: 'black',
+        color: Platform.OS === 'ios' ? THEME.COLOR.PRIMARY : 'white',
         fontSize: 18
     }
 })

@@ -10,7 +10,7 @@ import { Ionicons } from '@expo/vector-icons';
 import {
     NumberContainer,
     Card,
-    MainButton,
+    MainButtonAndroid,
     BodyText
 } from '../../components/common'
 import DefaultStyles from '../../constants/default-styles';
@@ -88,13 +88,13 @@ export const GameScreen = props => {
     if(Dimensions.get('window').height < 500){
         Player = () => (
             <View style={styles.controls}>
-                <MainButton onPress={nextGuessHandler.bind(this, 'lower')}>
+                <MainButtonAndroid onPress={nextGuessHandler.bind(this, 'lower')}>
                     <Ionicons name="md-remove" size={24} color="white" />
-                </MainButton>
+                </MainButtonAndroid>
                 <NumberContainer>{currentGuess}</NumberContainer>
-                <MainButton onPress={nextGuessHandler.bind(this, 'greater')}>
+                <MainButtonAndroid onPress={nextGuessHandler.bind(this, 'greater')}>
                     <Ionicons name="md-add" size={24} color="white" />
-                </MainButton>
+                </MainButtonAndroid>
             </View>
         )
     } else {
@@ -102,12 +102,12 @@ export const GameScreen = props => {
             <Fragment>
                 <NumberContainer>{currentGuess}</NumberContainer>
                 <Card style={styles.buttonContainer}>
-                    <MainButton onPress={nextGuessHandler.bind(this, 'lower')}>
+                    <MainButtonAndroid onPress={nextGuessHandler.bind(this, 'lower')}>
                         <Ionicons name="md-remove" size={24} color="white" />
-                    </MainButton>
-                    <MainButton onPress={nextGuessHandler.bind(this, 'greater')}>
+                    </MainButtonAndroid>
+                    <MainButtonAndroid onPress={nextGuessHandler.bind(this, 'greater')}>
                         <Ionicons name="md-add" size={24} color="white" />
-                    </MainButton>
+                    </MainButtonAndroid>
                 </Card>
             </Fragment>
         )

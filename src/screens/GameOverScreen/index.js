@@ -4,7 +4,7 @@ import {View, Text, Image, ScrollView, Dimensions} from 'react-native';
 import {
     BodyText,
     TitleText,
-    MainButton
+    MainButtonAndroid
 } from '../../components/common'
 import {styles as style}from './styles'
 
@@ -43,7 +43,7 @@ export const GameOverScreen = props => {
                     </BodyText>
                 </View>
 
-                <MainButton onPress={props.onRestart}>NEW GAME</MainButton>
+                <MainButtonAndroid onPress={props.onRestart}>NEW GAME</MainButtonAndroid>
             </View>
         </ScrollView>
     );
